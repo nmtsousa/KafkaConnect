@@ -25,6 +25,13 @@ docker run --rm -ti --env-file envfile kafkaconnect
 The contents of the *envfile* should be something like:
 
 ```shell
-# Kafka Settings
-
+# Kafka Connect Settings
+CONNECT_KEY_CONVERTER=org.apache.kafka.connect.json.JsonConverter
+CONNECT_VALUE_CONVERTER=org.apache.kafka.connect.json.JsonConverter
+CONNECT_GROUP_ID=kafka-connect
+CONNECT_OFFSET_STORAGE_TOPIC=kafka-connect-offset-storage-topic
+CONNECT_CONFIG_STORAGE_TOPIC=kafka-connect-config-storage-topic
+CONNECT_STATUS_STORAGE_TOPIC=kafka-connect-status-storage-topic
+CONNECT_BOOTSTRAP_CONTROLLERS=kafka-cluster:9092
+# ...
 ```
