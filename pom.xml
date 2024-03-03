@@ -31,8 +31,7 @@
             <artifactId>connect-runtime</artifactId>
             <version>${kafka.version}</version>
         </dependency>
-
-
+        
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>connect-transforms</artifactId>
